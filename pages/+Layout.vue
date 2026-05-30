@@ -6,8 +6,7 @@
     <header class="border-b border-base-300 bg-base-100/90 backdrop-blur sticky top-0 z-40 shadow-sm">
       <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
         <div class="flex items-center gap-2">
-          <img :src="siteLogo" height="28" width="28" class="h-7 w-7 rounded object-cover" alt="logo" />
-          <a href="/" class="text-2xl font-bold text-primary">{{ siteName }}</a>
+          <a href="/" class="text-2xl font-bold text-primary"><img :src="siteLogo" height="28" width="28" class="h-7 w-7 rounded object-cover" alt="logo" /></a>
           <!-- <p class="text-sm text-base-content/60">{{ siteSubtitle }}</p> -->
         </div>
         <nav class="flex items-center gap-2 text-sm">
