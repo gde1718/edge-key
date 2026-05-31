@@ -87,9 +87,7 @@
             <div class="grid gap-3 md:grid-cols-2">
               <label v-for="channel in epayChannels" :key="channel.value" class="rounded-box border border-base-300 p-4">
                 <div class="flex items-center justify-between gap-3">
-                  <span class="flex items-center gap-2">
-                    
-                    <svg v-else-if="channel.icon === 'wechat'" class="h-5 w-5" viewBox="0 0 1024 1024" aria-hidden="true">
+                  <svg v-else-if="channel.icon === 'wechat'" class="h-5 w-5" viewBox="0 0 1024 1024" aria-hidden="true">
                       <path fill="#07c160" d="M420 190c-190 0-344 123-344 276 0 88 51 166 131 217l-31 94 112-55c41 13 86 20 132 20 190 0 344-123 344-276S610 190 420 190Z" />
                       <path fill="#07c160" d="M690 431c151 0 274 97 274 216 0 70-42 132-108 171l25 77-90-45c-32 9-66 14-101 14-151 0-274-97-274-217s123-216 274-216Z" />
                       <circle cx="300" cy="380" r="34" fill="#fff" />
@@ -97,6 +95,11 @@
                       <circle cx="606" cy="590" r="28" fill="#fff" />
                       <circle cx="778" cy="590" r="28" fill="#fff" />
                     </svg>
+                  <span class="flex items-center gap-2">
+                    <svg v-if="channel.icon === 'alipay'" class="h-5 w-5 text-[#1677ff]" viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="true">
+                      <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64Zm234.5 610.9c-26.2-8.6-61.5-21.8-101.9-39.9-45.6 52.5-103.4 83.2-173.5 83.2-76.6 0-126.2-40.5-126.2-98.8 0-56.6 47.8-99.4 124.5-99.4 38.1 0 79.7 8.3 124.8 24.9 18.4-32.3 33.1-69.8 44.1-112.5H318.7v-58.8h169.1v-61.9H282.2v-60.2h205.6v-82.1h67.3v82.1h207.1v60.2H555.1v61.9h171.6c-14.8 76.6-39.3 140.7-73.5 192.3 38.5 16.4 77.9 31.1 118.2 44.2l-24.9 64.8ZM468.8 579.2c-39.4 0-62.5 15.2-62.5 39.7 0 25.9 24.3 43.5 63.7 43.5 43.1 0 79.7-18.1 109.8-54.4-42.1-19.2-79.1-28.8-111-28.8Z" />
+                    </svg>
+                    
                     {{ channel.label }}
                   </span>
                   <input v-model="form.paymentChannel" type="radio" class="radio radio-primary radio-sm" :value="channel.value" />
